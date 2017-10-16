@@ -1,0 +1,38 @@
+- name: Check if zookeeper is installed
+  stat:
+    path: "{{ ZOOKEEPER_HOME }}"
+  register: zoo
+  tags: ['start', 'stop', 'install', 'uninstall', 'info']
+
+- name: Install Zookeeper
+  include: install.yml
+  tags: install
+  when: zoo.stat.exists == False
+
+- name: Configure Zookeeper
+  include: configure.yml
+  tags: install
+  when: zoo.stat.exists == False
+
+- name: Fail play if Zookeeper is not installed
+  fail:
+    msg: "Zookeeper is not installed"
+  when: zoo.stat.exists == False
+  tags: ['start', 'stop', 'uninstall', 'info']
+
+- name: Start zookeeper
+  include: start.yml
+  tags: start
+
+- name: Stop zookeeper
+  include: stop.yml
+  tags: ['stop', 'uninstall']
+
+- name: Uninstall zookeeper
+  include: uninstall.yml
+  tags: uninstall
+  when: zoo.stat.exists
+
+- name: Zookeeper info
+  include: info.yml
+  tags: info

@@ -1,0 +1,7 @@
+- name: Zookeeper exists status report
+  debug:
+    msg: Zookeeper is {% if zoo.stat.exists == False %}not {% endif %}installed
+
+- name: Call service task
+  include: service.yml stage='info'
+  when: zoo.stat.exists

@@ -1,0 +1,11 @@
+---
+key_pair: aws-key-fast-ai
+instance_type: t2.micro
+region: us-west-2
+security_group_id: sg-66ebcb1c
+num_instances: 1
+subnet_id: subnet-d4e2179c
+tag_key_vals:
+  Name: real-time-ml
+  class: kafka
+  class2: zookeeper
