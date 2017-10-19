@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: ai.h2o:h2o-genmodel:3.14.0.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/ai/h2o/h2o-genmodel/3.14.0.1/h2o-genmodel-3.14.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/ai/h2o/h2o-genmodel/3.14.0.1/h2o-genmodel-3.14.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/ai/h2o/h2o-genmodel/3.14.0.1/h2o-genmodel-3.14.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
